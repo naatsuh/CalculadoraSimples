@@ -23,18 +23,22 @@ public class Main {
         System.out.println("Escolha a operação");
         verificarOperacao = tecladoString.nextLine();
 
-        if( verificarOperacao == "+"){
-            operacoes.Somar(n1, n2);
+        if( verificarOperacao.equals("+")){
 
-        } if (verificarOperacao == "-"){
-            operacoes.Subtrair(n1, n2);
-        } if (verificarOperacao == "*"){
-            operacoes.multiplicar(n1, n2);
-        } if (verificarOperacao == "/"){
-            operacoes.dividir(n1, n2);
+            System.out.println(n1 + " " + verificarOperacao +" "+ n2 +" = "+  operacoes.Somar(n1, n2) );
+
+        } if (verificarOperacao.equals( "-")){
+            System.out.println(n1 + " " + verificarOperacao +" "+ n2 +" = "+   operacoes.Subtrair(n1, n2) );
+
+        } if (verificarOperacao.equals("*") ){
+            System.out.println(n1 + " " + verificarOperacao +" "+ n2 +" = "+   operacoes.multiplicar(n1, n2) );
+
+        } if (verificarOperacao.equals("/")){
+            System.out.println(n1 + " " + verificarOperacao +" "+ n2 +" = "+   operacoes.dividir(n1, n2) );
+
 
         }
-        System.out.println(n1 + " " + verificarOperacao +" "+ n2 +" = " );
+
 
     }
 }
