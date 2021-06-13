@@ -11,16 +11,17 @@ public class Main {
 
         Operacoes operacoes = new Operacoes();
         Scanner teclado= new Scanner(System.in);
+        Scanner tecladoString = new Scanner(System.in);
+
 
         System.out.println("Digite um número");
         n1 = teclado.nextDouble();
-
 
         System.out.println("Digite o segundo número");
         n2 = teclado.nextDouble();
 
         System.out.println("Escolha a operação");
-        verificarOperacao = teclado.nextLine();
+        verificarOperacao = tecladoString.nextLine();
 
         if( verificarOperacao == "+"){
             operacoes.Somar(n1, n2);
@@ -33,6 +34,7 @@ public class Main {
             operacoes.dividir(n1, n2);
 
         }
+        System.out.println(n1 + " " + verificarOperacao +" "+ n2 +" = " );
 
     }
 }
